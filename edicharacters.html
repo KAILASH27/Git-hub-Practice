@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>EDI Validation</title>
+		<script>  
+			function validateform(txt){  
+				var text= /^[^|<>@&,;]+$/ ;
+				if(txt.value.test(text)){
+					alert("valid address"):
+					return true;
+				}else {
+					alert("Invalid Address");
+					return false;
+				}
+			}
+		</script>
+	</head>
+	<body>  
+		<form name="myform">  
+			Address: <input type="text" name="address" placeholder="Enter Address"><br>
+			<input type="submit" name="submit" value="Submit" onclick="validateform(document.myform.address)">
+		</form>  
+	</body>
+</html>
