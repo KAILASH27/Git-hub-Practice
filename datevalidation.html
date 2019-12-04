@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title></title>
+	<script>
+		function validateDate(testdate) {
+			var date_regex = /^\d{2}\/\d{2}\/\d{4}$/ ;
+			if(date_regex.test(testdate);
+					alert("valid date");
+					return true;
+			else 
+				alert("invalid date");
+				return false;
+        }
+	</script>
+	
+</head>
+<body>
+	<form name="form" onsubmit="return validateDate(date)">
+		Date:<input type="date" name="date" placeholder="dd/mm/yyyy" >
+			<br>
+			<input type="submit" value="check" onclick="validateDate(document.form.date)">
+	</form>
+</body>
+</html>
